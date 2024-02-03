@@ -1,0 +1,43 @@
+<template>
+    <template if:true={fieldName}>
+        <template if:true={dateField}>
+            <lightning-input
+                label="Select Date"
+                required="true"
+                type="date"
+                onchange={handleFilterChange}
+            ></lightning-input>
+        </template>
+        <template if:true={booleanField}>
+            <lightning-combobox
+                label="Select Value"
+                options={booleanOption}
+                required="true"
+                onchange={handleFilterChange}>
+            </lightning-combobox>
+        </template>
+        <template if:true={datetimeField}>
+            <lightning-input
+                type="datetime"
+                required="true"
+                onchange={handleFilterChange}
+            ></lightning-input>
+        </template>
+        <template if:true={picklistField}>
+            <lightning-combobox
+                label="Select Value"
+                options={picklistOptions}
+                required="true"
+                onchange={handleFilterChange}>
+            </lightning-combobox>
+        </template>
+        <template if:true={multipicklistField}>
+            <lightning-combobox
+                label="Select Value"
+                options={picklistOptions}
+                required="true"
+                onchange={handleFilterChange}>
+            </lightning-combobox>
+        </template>
+    </template>
+</template>
